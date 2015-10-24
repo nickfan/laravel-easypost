@@ -1,16 +1,16 @@
-Stripe 2.0 for Laravel 4
+Easypost for Laravel 4
 ==============
 
-Integrates the Stripe PHP library with Laravel 4 via a ServiceProvider, config, and Blade extensions.
+Integrates the Easypost PHP library with Laravel 4 via a ServiceProvider, config, and Blade extensions.
 
 *This is originally a fork from the [abodeo/laravel-stripe](https://github.com/Abodeo/laravel-stripe) package*
 
 ### Installation
 
-Include laravel-stripe as a dependency in composer.json:
+Include laravel-easypost as a dependency in composer.json:
 
 ~~~
-"mmollick/laravel-stripe": "dev-master"
+"mandofever/laravel-easypost": "dev-master"
 ~~~
 
 Run `composer install` to download the dependency.
@@ -20,12 +20,12 @@ Add the ServiceProvider to your provider array within `app/config/app.php`:
 ~~~
 'providers' => array(
 
-    'MMollick\LaravelStripe\LaravelStripeServiceProvider'
+    'Mandofever78\LaravelEasypost\LaravelEasypostServiceProvider'
 
 )
 ~~~
 
-Finally, publish the configuration files via `php artisan config:publish abodeo/laravel-stripe`.
+Finally, publish the configuration files via `php artisan config:publish mandofever78/laravel-easypost`.
 
 
 ### Configuration
@@ -37,10 +37,8 @@ If you have not setup a "dot file", read Laravel's "[Protecting Sensitive Config
 ~~~
 <?php
 return array(
-  'stripe' => array(
+  'easypost' => array(
     'api_key' => 'my-api-key',
-    'publishable_key' => 'my-pub-key',
-    'api_version' => null,
   )
 );
 ~~~
@@ -51,19 +49,11 @@ If you insist on keeping your API credentials in your config, you can set your A
 <?php
 return array(
   'api_key' => 'my-api-key',
-  'publishable_key' => 'my-pub-key',
-  'api_version' => null,
 );
 ~~~
 
 ### Usage
 
-You may use the [Stripe PHP Library](https://stripe.com/docs/checkout/guides/php) as normal within your application. The Stripe API will automatically be configured with your API Key, so you do not need to set it yourself.
+You may use the [Easypost PHP Library] as normal within your application. The Easypost API will automatically be configured with your API Key, so you do not need to set it yourself.
 
-In your Blade views, you may output your Stripe Publishable Key using the `@stripeKey` Blade extension:
 
-~~~
-<script src="https://checkout.stripe.com/v2/checkout.js" class="stripe-button"
-          data-key="@stripeKey"
-          data-amount="5000" data-description="One year's subscription"></script>
-~~~

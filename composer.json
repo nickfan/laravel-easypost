@@ -1,23 +1,23 @@
 {
-    "name": "mmollick/laravel-stripe",
+    "name": "mandofever78/laravel-easypost",
     "description": "",
     "authors": [
         {
-            "name": "Michael Mollick",
-            "email": "mollick2@gmail.com"
+            "name": "Nolan Lawrence",
+            "email": "nolanlawrence@icloud.com"
         }
     ],
     "require": {
         "php": ">=5.3.0",
         "illuminate/support": "~4.0",
-        "stripe/stripe-php": "2.*"
+        "easypost/easypost-php": "dev-master"
     },
     "autoload": {
         "classmap": [
             "src/migrations"
         ],
         "psr-0": {
-            "MMollick\\LaravelStripe": "src/"
+            "Mandofever78\\LaravelEasypost": "src/"
         }
     },
     "minimum-stability": "dev"
