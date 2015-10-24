@@ -10,7 +10,7 @@ Integrates the Easypost PHP library with Laravel 4 via a ServiceProvider, config
 Include laravel-easypost as a dependency in composer.json:
 
 ~~~
-"mandofever/laravel-easypost": "dev-master"
+"mandofever78/laravel-easypost": "dev-master"
 ~~~
 
 Run `composer install` to download the dependency.
