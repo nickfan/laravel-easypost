@@ -2,7 +2,8 @@
 
 use Illuminate\Support\ServiceProvider;
 
-class LaravelEasypostServiceProvider extends ServiceProvider {
+class LaravelEasypostServiceProvider extends ServiceProvider
+{
 
     /**
      * Indicates if loading of the provider is deferred.
@@ -20,16 +21,7 @@ class LaravelEasypostServiceProvider extends ServiceProvider {
     {
         $this->package('mandofever78/laravel-easypost');
 
-        /*
-         * Load Stripe configuration
-         *
-         * API keys should be utilizing Laravel's "dot files" to keep them out of source
-         * control and making them easily overridable on dev environments
-         *
-         * Read more: http://laravel.com/docs/configuration#environment-configuration
-         */
-        $api_key = isset($_ENV['easypost.api_key']) ? $_ENV['easypost.api_key'] : $this->app['config']->get('laravel-easypost::easypost.api_key');
-        \EasyPost\EasyPost::setApiKey($api_key);
+        \EasyPost\EasyPost::setApiKey(env('EASYPOST_API_KEY'));
     }
 
     /**
@@ -49,7 +41,7 @@ class LaravelEasypostServiceProvider extends ServiceProvider {
      */
     public function provides()
     {
-        return array();
+        return [];
     }
 
 }
