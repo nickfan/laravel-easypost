@@ -19,8 +19,6 @@ class LaravelEasypostServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->package('mandofever78/laravel-easypost');
-
         \EasyPost\EasyPost::setApiKey(env('EASYPOST_API_KEY'));
     }
 
