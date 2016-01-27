@@ -17,5 +17,5 @@
             "Mandofever78\\LaravelEasypost": "src/"
         }
     },
-    "minimum-stability": "dev"
+    "minimum-stability": "stable"
 }
