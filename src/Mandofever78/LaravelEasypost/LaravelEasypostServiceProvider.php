@@ -19,7 +19,10 @@ class LaravelEasypostServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        \EasyPost\EasyPost::setApiKey(env('EASYPOST_API_KEY'));
+        $this->publishes([
+            __DIR__ . '/../../../config/config.php' => config_path('easypost.php'),
+        ]);
+
     }
 
     /**
@@ -29,7 +32,7 @@ class LaravelEasypostServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        \EasyPost\EasyPost::setApiKey(config('easypost.apiKey'));
     }
 
     /**

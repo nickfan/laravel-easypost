@@ -9,7 +9,7 @@
     ],
     "require": {
         "php": ">=5.5.9",
-        "illuminate/support": "~5.2",
+        "illuminate/support": "~5.0|~5.1|~5.2|~5.3|~5.4",
         "easypost/easypost-php": "~3.0"
     },
     "autoload": {
